@@ -1,0 +1,157 @@
+import connectDB from './mongodb';
+import User from '@/models/User';
+import Partner from '@/models/Partner';
+import Product from '@/models/Product';
+import { User as UserType, Partner as PartnerType, Product as ProductType } from '@/types';
+
+// Users CRUD
+export const usersDb = {
+  getAll: async (): Promise<UserType[]> => {
+    await connectDB();
+    const users = await User.find({}).lean();
+    return users.map(u => ({
+      ...u,
+      _id: u._id.toString(),
+      createdAt: u.createdAt?.toISOString() || new Date().toISOString(),
+      updatedAt: u.updatedAt?.toISOString() || new Date().toISOString(),
+    }));
+  },
+  
+  getById: (id: string): User | undefined => {
+    const users = readData<User>(USERS_FILE);
+    return users.find(u => u._id === id);
+  },
+  
+  getByUsername: (username: string): User | undefined => {
+    const users = readData<User>(USERS_FILE);
+    return users.find(u => u.username === username);
+  },
+  
+  create: (user: User): User => {
+    const users = readData<User>(USERS_FILE);
+    users.push(user);
+    writeData(USERS_FILE, users);
+    return user;
+  },
+  
+  update: (id: string, updates: Partial<User>): User | null => {
+    const users = readData<User>(USERS_FILE);
+    const index = users.findIndex(u => u._id === id);
+    if (index === -1) return null;
+    users[index] = { ...users[index], ...updates };
+    writeData(USERS_FILE, users);
+    return users[index];
+  },
+  
+  delete: (id: string): boolean => {
+    const users = readData<User>(USERS_FILE);
+    const filtered = users.filter(u => u._id !== id);
+    if (filtered.length === users.length) return false;
+    writeData(USERS_FILE, filtered);
+    return true;
+  },
+};
+
+// Partners CRUD
+export const partnersDb = {
+  getAll: (): Partner[] => readData<Partner>(PARTNERS_FILE),
+  
+  getById: (id: string): Partner | undefined => {
+    const partners = readData<Partner>(PARTNERS_FILE);
+    return partners.find(p => p._id === id);
+  },
+  
+  create: (partner: Partner): Partner => {
+    const partners = readData<Partner>(PARTNERS_FILE);
+    partners.push(partner);
+    writeData(PARTNERS_FILE, partners);
+    return partner;
+  },
+  
+  update: (id: string, updates: Partial<Partner>): Partner | null => {
+    const partners = readData<Partner>(PARTNERS_FILE);
+    const index = partners.findIndex(p => p._id === id);
+    if (index === -1) return null;
+    partners[index] = { ...partners[index], ...updates, updatedAt: new Date().toISOString() };
+    writeData(PARTNERS_FILE, partners);
+    return partners[index];
+  },
+  
+  delete: (id: string): boolean => {
+    const partners = readData<Partner>(PARTNERS_FILE);
+    const filtered = partners.filter(p => p._id !== id);
+    if (filtered.length === partners.length) return false;
+    writeData(PARTNERS_FILE, filtered);
+    
+    // Also delete associated products
+    const products = readData<Product>(PRODUCTS_FILE);
+    const filteredProducts = products.filter(prod => prod.partnerId !== id);
+    writeData(PRODUCTS_FILE, filteredProducts);
+    
+    return true;
+  },
+};
+
+// Products CRUD
+export const productsDb = {
+  getAll: (): Product[] => readData<Product>(PRODUCTS_FILE),
+  
+  getById: (id: string): Product | undefined => {
+    const products = readData<Product>(PRODUCTS_FILE);
+    return products.find(p => p._id === id);
+  },
+  
+  getByQRCode: (qrCode: string): Product | undefined => {
+    const products = readData<Product>(PRODUCTS_FILE);
+    return products.find(p => p.qrCode === qrCode);
+  },
+  
+  getByPartnerId: (partnerId: string): Product[] => {
+    const products = readData<Product>(PRODUCTS_FILE);
+    return products.filter(p => p.partnerId === partnerId);
+  },
+  
+  create: (product: Product): Product => {
+    const products = readData<Product>(PRODUCTS_FILE);
+    products.push(product);
+    writeData(PRODUCTS_FILE, products);
+    
+    // Update partner's product list
+    const partner = partnersDb.getById(product.partnerId);
+    if (partner) {
+      partnersDb.update(product.partnerId, {
+        products: [...partner.products, product._id],
+      });
+    }
+    
+    return product;
+  },
+  
+  update: (id: string, updates: Partial<Product>): Product | null => {
+    const products = readData<Product>(PRODUCTS_FILE);
+    const index = products.findIndex(p => p._id === id);
+    if (index === -1) return null;
+    products[index] = { ...products[index], ...updates };
+    writeData(PRODUCTS_FILE, products);
+    return products[index];
+  },
+  
+  delete: (id: string): boolean => {
+    const products = readData<Product>(PRODUCTS_FILE);
+    const product = products.find(p => p._id === id);
+    if (!product) return false;
+    
+    const filtered = products.filter(p => p._id !== id);
+    writeData(PRODUCTS_FILE, filtered);
+    
+    // Update partner's product list
+    const partner = partnersDb.getById(product.partnerId);
+    if (partner) {
+      partnersDb.update(product.partnerId, {
+        products: partner.products.filter(pid => pid !== id),
+      });
+    }
+    
+    return true;
+  },
+};

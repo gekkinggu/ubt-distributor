@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "948230d6-4af0-4ec1-8193-9968656e54dd",
+    "username": "admin",
+    "password": "$2a$10$mdvvpad/JDZ69ICSorAmJuPwUlrQKacbWWkAgi14LKyqYHqgBckBK",
+    "role": "admin",
+    "createdAt": "2025-11-26T11:49:39.479Z"
+  },
+  {
+    "_id": "e2312a4a-f017-47e4-8dc7-97ed33fd43d6",
+    "username": "operator",
+    "password": "$2a$10$3uzRNZ6uMCQ.63SHPfrqEeo8V23X4TmeJWdrPUHg29VyXNHKnu6qa",
+    "role": "operator",
+    "createdAt": "2025-11-26T11:49:39.479Z"
+  }
+]

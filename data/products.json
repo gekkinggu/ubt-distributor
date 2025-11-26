@@ -1,0 +1,193 @@
+[
+  {
+    "_id": "9788eaaf-c6f7-4411-a87a-414a89b643a3",
+    "qrCode": "UBT-2025-37274323-223",
+    "partnerId": "8808368f-7a5f-4328-8b78-ff1785b08e30",
+    "batchNumber": "BATCH-2024-001",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2026-11-25",
+    "status": "scanned",
+    "createdAt": "2025-11-26T11:49:39.484Z",
+    "scannedAt": "2025-11-26T11:58:04.444Z",
+    "scannedBy": "e2312a4a-f017-47e4-8dc7-97ed33fd43d6",
+    "condition": "terkirim"
+  },
+  {
+    "_id": "269504d7-9714-4f9e-baac-ef118239cd63",
+    "qrCode": "UBT-2025-C5561AC9-214",
+    "partnerId": "8808368f-7a5f-4328-8b78-ff1785b08e30",
+    "batchNumber": "BATCH-2024-002",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2026-11-25",
+    "status": "active",
+    "createdAt": "2025-11-26T11:49:39.486Z",
+    "condition": "terkirim"
+  },
+  {
+    "_id": "d9505391-4329-4dc9-9496-a63b67efd564",
+    "qrCode": "UBT-2025-B1333C5A-671",
+    "partnerId": "8808368f-7a5f-4328-8b78-ff1785b08e30",
+    "batchNumber": "BATCH-2024-003",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2026-11-25",
+    "status": "scanned",
+    "createdAt": "2025-11-26T11:49:39.490Z",
+    "condition": "rusak",
+    "scannedAt": "2025-11-26T12:13:17.838Z",
+    "scannedBy": "e2312a4a-f017-47e4-8dc7-97ed33fd43d6"
+  },
+  {
+    "_id": "928eb4c1-54f9-4bae-89d8-cfa7b79a5294",
+    "qrCode": "UBT-2025-8EA57381-346",
+    "partnerId": "8808368f-7a5f-4328-8b78-ff1785b08e30",
+    "batchNumber": "BATCH-2024-004",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2026-11-25",
+    "status": "active",
+    "createdAt": "2025-11-26T11:49:39.491Z",
+    "condition": "terkirim"
+  },
+  {
+    "_id": "d564505c-4968-48b9-80ef-1d93d13ee3ec",
+    "qrCode": "UBT-2025-FB04B159-336",
+    "partnerId": "1113a8ad-b652-44e6-bac7-e315f0eaacb6",
+    "batchNumber": "BATCH-2024-005",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2026-11-25",
+    "status": "active",
+    "createdAt": "2025-11-26T11:49:39.492Z",
+    "condition": "terkirim"
+  },
+  {
+    "_id": "a379c673-8d35-41cf-b59c-f3d1f4178afb",
+    "qrCode": "UBT-2025-D83906E9-141",
+    "partnerId": "1113a8ad-b652-44e6-bac7-e315f0eaacb6",
+    "batchNumber": "BATCH-2024-006",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2026-11-25",
+    "status": "active",
+    "createdAt": "2025-11-26T11:49:39.494Z",
+    "condition": "terkirim"
+  },
+  {
+    "_id": "c63910b4-2d3e-406d-8ede-80b7e42bfe13",
+    "qrCode": "UBT-2025-E1B95D24-533",
+    "partnerId": "1113a8ad-b652-44e6-bac7-e315f0eaacb6",
+    "batchNumber": "BATCH-2024-007",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2026-11-25",
+    "status": "active",
+    "createdAt": "2025-11-26T11:49:39.495Z",
+    "condition": "terkirim"
+  },
+  {
+    "_id": "406f9706-8954-4843-877a-5ef33a181056",
+    "qrCode": "UBT-2025-C0C53C48-011",
+    "partnerId": "1113a8ad-b652-44e6-bac7-e315f0eaacb6",
+    "batchNumber": "BATCH-2024-008",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2026-11-25",
+    "status": "active",
+    "createdAt": "2025-11-26T11:49:39.496Z",
+    "condition": "terkirim"
+  },
+  {
+    "_id": "f1cf5bd0-890e-4f1f-aae0-dcb6de7f097a",
+    "qrCode": "UBT-2025-3842B43E-552",
+    "partnerId": "1113a8ad-b652-44e6-bac7-e315f0eaacb6",
+    "batchNumber": "BATCH-2024-009",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2026-11-25",
+    "status": "active",
+    "createdAt": "2025-11-26T11:49:39.498Z",
+    "condition": "terkirim"
+  },
+  {
+    "_id": "ac90c24b-8390-457d-b572-fdd29eebffa1",
+    "qrCode": "UBT-2025-A861CE02-552",
+    "partnerId": "e3a2a00d-d3a2-43fb-9dbe-449b9a14c4ea",
+    "batchNumber": "BATCH-2024-010",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2026-11-25",
+    "status": "active",
+    "createdAt": "2025-11-26T11:49:39.499Z",
+    "condition": "terkirim"
+  },
+  {
+    "_id": "a0e87648-7848-431f-aba2-12e81c0fc7b2",
+    "qrCode": "UBT-2025-FFA73135-651",
+    "partnerId": "e3a2a00d-d3a2-43fb-9dbe-449b9a14c4ea",
+    "batchNumber": "BATCH-2024-011",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2026-11-25",
+    "status": "active",
+    "createdAt": "2025-11-26T11:49:39.500Z",
+    "condition": "terkirim"
+  },
+  {
+    "_id": "24d0bc15-16d7-4dca-a106-37b1d5cf752a",
+    "qrCode": "UBT-2025-C4EBFBB4-201",
+    "partnerId": "e3a2a00d-d3a2-43fb-9dbe-449b9a14c4ea",
+    "batchNumber": "BATCH-2024-012",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2026-11-25",
+    "status": "active",
+    "createdAt": "2025-11-26T11:49:39.502Z",
+    "condition": "terkirim"
+  },
+  {
+    "_id": "488ec293-5c35-49b7-aa13-88eb608fbb30",
+    "qrCode": "UBT-2025-D46F4D5E-720",
+    "partnerId": "8808368f-7a5f-4328-8b78-ff1785b08e30",
+    "batchNumber": "1",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2025-11-29",
+    "status": "active",
+    "createdAt": "2025-11-26T11:53:54.106Z",
+    "condition": "terkirim"
+  },
+  {
+    "_id": "5b3648ca-ea75-4201-a995-8a78d7d3ec2a",
+    "qrCode": "UBT-2025-A152C71F-598",
+    "partnerId": "c5f39faa-186a-4c06-b60b-225aa5365c4b",
+    "batchNumber": "BATCH-2025-231",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2025-11-07",
+    "status": "active",
+    "condition": "terkirim",
+    "createdAt": "2025-11-26T12:09:28.448Z"
+  },
+  {
+    "_id": "88df7960-89ae-4fb0-820d-e8156854351a",
+    "qrCode": "UBT-2025-B3530426-754",
+    "partnerId": "c5f39faa-186a-4c06-b60b-225aa5365c4b",
+    "batchNumber": "BATCH-2025-231",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2025-11-07",
+    "status": "active",
+    "condition": "terkirim",
+    "createdAt": "2025-11-26T12:09:28.450Z"
+  },
+  {
+    "_id": "cba238dc-d29e-4b27-8805-4ec147d0ffb0",
+    "qrCode": "UBT-2025-4601491B-633",
+    "partnerId": "c5f39faa-186a-4c06-b60b-225aa5365c4b",
+    "batchNumber": "BATCH-2025-231",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2025-11-07",
+    "status": "active",
+    "condition": "terkirim",
+    "createdAt": "2025-11-26T12:09:28.452Z"
+  },
+  {
+    "_id": "96d1fcbe-12ef-42fa-ae3e-e4e3d0f4f743",
+    "qrCode": "UBT-2025-4168F7D0-450",
+    "partnerId": "c5f39faa-186a-4c06-b60b-225aa5365c4b",
+    "batchNumber": "BATCH-2025-231",
+    "manufacturingDate": "2025-11-26",
+    "expiryDate": "2025-11-07",
+    "status": "active",
+    "condition": "terkirim",
+    "createdAt": "2025-11-26T12:09:28.453Z"
+  }
+]

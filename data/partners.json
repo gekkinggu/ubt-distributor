@@ -1,0 +1,55 @@
+[
+  {
+    "_id": "8808368f-7a5f-4328-8b78-ff1785b08e30",
+    "name": "RS Cipto Mangunkusumo",
+    "province": "DKI Jakarta",
+    "products": [
+      "9788eaaf-c6f7-4411-a87a-414a89b643a3",
+      "269504d7-9714-4f9e-baac-ef118239cd63",
+      "d9505391-4329-4dc9-9496-a63b67efd564",
+      "928eb4c1-54f9-4bae-89d8-cfa7b79a5294",
+      "488ec293-5c35-49b7-aa13-88eb608fbb30"
+    ],
+    "createdAt": "2025-11-26T11:49:39.481Z",
+    "updatedAt": "2025-11-26T11:53:54.110Z"
+  },
+  {
+    "_id": "1113a8ad-b652-44e6-bac7-e315f0eaacb6",
+    "name": "RS Sardjito",
+    "province": "DI Yogyakarta",
+    "products": [
+      "d564505c-4968-48b9-80ef-1d93d13ee3ec",
+      "a379c673-8d35-41cf-b59c-f3d1f4178afb",
+      "c63910b4-2d3e-406d-8ede-80b7e42bfe13",
+      "406f9706-8954-4843-877a-5ef33a181056",
+      "f1cf5bd0-890e-4f1f-aae0-dcb6de7f097a"
+    ],
+    "createdAt": "2025-11-26T11:49:39.481Z",
+    "updatedAt": "2025-11-26T11:49:39.498Z"
+  },
+  {
+    "_id": "e3a2a00d-d3a2-43fb-9dbe-449b9a14c4ea",
+    "name": "RS Hasan Sadikin",
+    "province": "Jawa Barat",
+    "products": [
+      "ac90c24b-8390-457d-b572-fdd29eebffa1",
+      "a0e87648-7848-431f-aba2-12e81c0fc7b2",
+      "24d0bc15-16d7-4dca-a106-37b1d5cf752a"
+    ],
+    "createdAt": "2025-11-26T11:49:39.481Z",
+    "updatedAt": "2025-11-26T11:49:39.502Z"
+  },
+  {
+    "_id": "c5f39faa-186a-4c06-b60b-225aa5365c4b",
+    "name": "RS Sutrisno",
+    "province": "Kalimantan Timur",
+    "products": [
+      "5b3648ca-ea75-4201-a995-8a78d7d3ec2a",
+      "88df7960-89ae-4fb0-820d-e8156854351a",
+      "cba238dc-d29e-4b27-8805-4ec147d0ffb0",
+      "96d1fcbe-12ef-42fa-ae3e-e4e3d0f4f743"
+    ],
+    "createdAt": "2025-11-26T12:09:11.271Z",
+    "updatedAt": "2025-11-26T12:09:28.454Z"
+  }
+]
