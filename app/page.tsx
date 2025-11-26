@@ -13,7 +13,7 @@ export default function LoginPage() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [initializing, setInitializing] = useState(false);
-  const [initialized, setInitialized] = useState(false);
+  const [initialized, setInitialized] = useState<boolean | null>(null);
 
   useEffect(() => {
     // Check if data is already initialized
@@ -22,18 +22,18 @@ export default function LoginPage() {
 
   const checkInitialization = async () => {
     try {
-      const response = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username: 'admin', password: 'test' }),
-      });
+      const response = await fetch('/api/check-init');
+      const data = await response.json();
       
-      // If we get any response, data is initialized
-      setInitialized(true);
+      if (data.success) {
+        setInitialized(data.initialized);
+      } else {
+        // If check fails, assume initialized to show login
+        setInitialized(true);
+      }
     } catch (err) {
-      // Error is fine, just means we need to check
+      // On error, assume initialized to show login
+      setInitialized(true);
     }
   };
 
@@ -98,6 +98,24 @@ export default function LoginPage() {
       setLoading(false);
     }
   };
+
+  // Show loading state while checking initialization
+  if (initialized === null) {
+    return (
+      <div className="login-container">
+        <div className="login-card">
+          <div className="login-header">
+            <h1 className="login-title">Uterine Balloon Tamponade</h1>
+            <p className="login-subtitle">Sistem Manajemen Distribusi</p>
+          </div>
+          <div style={{ textAlign: 'center', padding: '2rem' }}>
+            <div className="spinner" style={{ margin: '0 auto' }}></div>
+            <p style={{ marginTop: '1rem', color: '#666' }}>Memuat...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="login-container">
